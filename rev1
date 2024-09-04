@@ -1,0 +1,62 @@
+
+import numpy as np
+import itertools
+
+# 1) Define the matrices and perform operations
+
+# Using Python Lists
+A = [[3.7827, 3.3454, 3.2341], [2.2122, 3.5678, 3.9087], [1.1234, 2.8934, 5.9087]]
+B = [[3.1234, 3.0987, 3.1234], [2.1111, 3.2222, 3.3333], [1.0987, 1.3456, 5.1234]]
+C = [[3.1243, 3.0989, 3.1256], [2.6721, 3.6785, 3.9017], [1.1254, 2.8956, 5.9187]]
+
+# Using NumPy
+A_np = np.array(A)
+B_np = np.array(B)
+C_np = np.array(C)
+
+# 2) Create a List and perform operations
+my_list = [1225, 4986, 6789, 7890, 2345, 6783, 987, 1234, 8765, 3456]
+
+# II. Iterate using a for loop
+for item in my_list:
+    print(item)
+
+# III. Iterate using for loop and range
+for i in range(len(my_list)):
+    print(my_list[i])
+
+# IV. List Comprehension
+[print(item) for item in my_list]
+
+# V. Enumerate
+for index, item in enumerate(my_list):
+    print(index, item)
+
+# VI. Iter function and next function
+iter_list = iter(my_list)
+print(next(iter_list))
+
+# VII. Map function
+list(map(print, my_list))
+
+# VIII. Using zip
+for a, b in zip(my_list, my_list):
+    print(a, b)
+
+# IX. Using NumPy Module
+np_list = np.array(my_list)
+print(np_list)
+
+# 3) Compute all combinations and permutations
+A = [1, 2, 3, 4, 5]
+B = [6, 7, 8, 9, 10]
+C = [11, 12, 13, 14, 15]
+D = [16, 17, 18, 19, 20]
+E = [21, 22, 23, 24, 25]
+
+combinations = list(itertools.combinations(A + B + C + D + E, 3))
+permutations = list(itertools.permutations(A + B + C + D + E, 3))
+
+# 4) Using itertools compute permutations and combinations
+itertools_combinations = list(itertools.combinations(my_list, 3))
+itertools_permutations = list(itertools.permutations(my_list, 3))
